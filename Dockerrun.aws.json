@@ -1,0 +1,23 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "client",
+      "image": "shumyk/multi-client",
+      "hostname": "client",
+      "essentional": false
+    },
+    {
+      "name": "server",
+      "image": "shumyk/multi-server",
+      "hostname": "api",
+      "essentional": false
+    },
+    {
+      "name": "worker",
+      "image": "shumyk/multi-worker",
+      "hostname": "worker",
+      "essentional": false
+    }
+  ]
+}
