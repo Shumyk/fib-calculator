@@ -5,19 +5,32 @@
       "name": "client",
       "image": "shumyk/multi-client",
       "hostname": "client",
-      "essentional": false
+      "essential": false
     },
     {
       "name": "server",
       "image": "shumyk/multi-server",
       "hostname": "api",
-      "essentional": false
+      "essential": false
     },
     {
       "name": "worker",
       "image": "shumyk/multi-worker",
       "hostname": "worker",
-      "essentional": false
+      "essential": false
+    },
+    {
+      "name": "nginx",
+      "image": "shumyk/multi-nginx",
+      "hostname": "nginx",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": ["server", "client"]
     }
   ]
 }
