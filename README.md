@@ -13,3 +13,7 @@ Nginx is responsible for request routing to Client and Server.
 
 Project contains also docker-compose.yml file which build containers for development mode.
 Also here Dockerrun.aws.json which is used for determing containers and its details for AWS deployment.
+
+
+--  k8s directory
+Configuration files for Kubernetes. Inludes configs for all deployments, cluster IPs, persistent volume claim, redis, postgres, ingress service.
