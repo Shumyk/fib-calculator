@@ -17,3 +17,5 @@ Also here Dockerrun.aws.json which is used for determing containers and its deta
 
 --  k8s directory
 Configuration files for Kubernetes. Inludes configs for all deployments, cluster IPs, persistent volume claim, redis, postgres, ingress service.
+
+-- .travis.yml - configuration for Travis CI automatic builds
