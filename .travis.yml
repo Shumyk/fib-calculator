@@ -7,11 +7,11 @@ before_install:
   - curl https://sdk.cloud.google.com > sdk-cloud-install.sh;
   - bash sdk-cloud-install.sh --disable-prompts
   - source $HOME/google-cloud-sdk/path.bash.inc
-  - gcloud components install kubectl
-  - gcloud auth activate-service-account --key-file service-account.json
-  - gcloud config set project multi-k8s-305419
-  - gcloud config set compute/zone us-central1-c
-  - gcloud container clusters get-credentials multi-cluster
+  - gcloud components install kubectl --q
+  - gcloud auth activate-service-account --key-file service-account.json -q
+  - gcloud config set project multi-k8s-305419 -q
+  - gcloud config set compute/zone us-central1-c -q
+  - gcloud container clusters get-credentials multi-cluster -q
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - echo build -t shumyk/react-test -f ./client/Dockerfile.dev ./client
 
