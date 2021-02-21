@@ -13,7 +13,7 @@ before_install:
   - gcloud config set compute/zone us-central1-c -q
   - gcloud container clusters get-credentials multi-cluster -q
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - echo build -t shumyk/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t shumyk/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true shumyk/react-test npm test -- --coverage
